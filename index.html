@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="./styles.css">
+
+    <script src="https://kit.fontawesome.com/4762ba5018.js" crossorigin="anonymous"></script>
+
+    <title>Rent vs Buy V.2</title>
+
+</head>
+
+<body onload="GetDownPercent()">
+
+    <h1>Rent Vs Buy</h1>
+
+    <div class="container">
+
+        <div class="main-div">
+
+            <section>
+                <h3>Renting</h3>
+                <label>Monthly Rent</label>
+                <div class="div-wrapper">
+                    <div class="div-left">$</div>
+                    <div class="input-right">
+                        <input type="text" id="monthlyrent" value="2,300"
+                            oninput="MonthRent(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                </div>
+
+
+                <label>Renters Insurance</label>
+                <div class="div-wrapper">
+                    <div class="div-left">$</div>
+                    <div class="input-right">
+                        <input type="text" id="rentinsure" value="20"
+                            oninput="RentInsurance(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                </div>
+
+
+                <label>Annual Rent Increase</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" id="rateincrease" value="3"
+                            oninput="RentIncrease(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">%</div>
+                </div>
+            </section>
+
+
+            <section>
+                <h3>Buying</h3>
+                <label>Price</label>
+                <div class="div-wrapper">
+                    <div class="div-left">$</div>
+                    <div class="input-right">
+                        <input type="text" id="homeprice" value="300,000"
+                            oninput="Price(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div>
+                        <label>DownPayment</label>
+                        <div class="div-wrapper-down">
+                            <div class="div-left">$</div>
+                            <div class="input-right-down">
+                                <input type="text" id="dollardown" value="60,000"
+                                    oninput="GetDownPercent(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>&nbsp;</label>
+                        <div class="div-wrapper">
+                            <div class="input-left-down">
+                                <input type="text" id="percentdown" value="20"
+                                    oninput="GetDownAmount(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                            </div>
+                            <div class="div-right">%</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <label>Loan Amount</label>
+                <div class="div-wrapper">
+                    <div class="div-left" id="loanamount-div">$</div>
+                    <div class="input-right">
+                        <input type="text" id="loanamount" value="240,000" readonly>
+                    </div>
+                </div>
+
+
+                <label>Interest Rate</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" id="interest" value="4"
+                            oninput="Interest(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">%</div>
+                </div>
+
+
+                <label>Annual Property Tax</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" id="propertytax" value="4"
+                            oninput="PropertyTax(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">%</div>
+                </div>
+
+
+                <label>Property Tax Increase</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" id="taxincrease" value="4"
+                            oninput="PropertyTaxIncrease(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">%</div>
+                </div>
+
+
+                <label>Loan Length</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" id="loanlength" value="30"
+                            oninput="LoanLength(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">yrs</div>
+                </div>
+
+
+                <label>Monthly Home Insurance</label>
+                <div class="div-wrapper">
+                    <div class="div-left">$</div>
+                    <div class="input-right">
+                        <input type="text" id="monthhomeinsurance" value="100"
+                            oninput="MonthHomeInsurance(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                </div>
+
+                <label>Monthly HOA Fees</label>
+                <div class="div-wrapper">
+                    <div class="div-left">$</div>
+                    <div class="input-right">
+                        <input type="text" id="monthhoa" value="100"
+                            oninput="MonthHOA(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                </div>
+
+
+
+                <label>Monthly Repairs</label>
+                <div class="div-wrapper">
+                    <div class="div-left">$</div>
+                    <div class="input-right">
+                        <input type="text" id="monthrepairs" value="100"
+                            oninput="MonthRepairs(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                </div>
+
+
+                <div class="flex">
+                    <label style="margin-right: 5px;">Monthly Mortgage Insurance</label>
+                    <div class="tooltip"><i class="fa-solid fa-circle-question fa-sm"></i>
+                        <span class="tooltiptext">If downpayment is 20% or more, mortgage insurance isn't needed. If
+                            downpayment is
+                            under 20% then mortgage insurance is about 0.5% to 1% of the entire loan amount
+                            yearly.</span>
+                    </div>
+                </div>
+                <div class="div-wrapper">
+                    <div class="div-left" id="homeinsurance-div">$</div>
+                    <div class="input-right">
+                        <input type="text" id="monthmortgageinsurance" value="0"
+                            oninput="MonthMortgageInsurance(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                </div>
+
+
+                <label>Cost to Sell</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" id="sellingcost" value="6"
+                            oninput="SellingCost(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">%</div>
+                </div>
+
+
+                <label>Closing Costs</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" id="closingcost" value="6"
+                            oninput="ClosingCost(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">%</div>
+                </div>
+
+            </section>
+
+
+            <section>
+                <h3>Other</h3>
+                <label>Years Before Selling</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" value="5" id="yrsbeforeselling"
+                            oninput="ChangeYearsBeforeSelling(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">yrs</div>
+                </div>
+
+
+                <label>Home Appreciation</label>
+                <div class="div-wrapper">
+                    <div class="input-left">
+                        <input type="text" value="2" id="homeappreciation"
+                            oninput="Appreciation(); this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="div-right">%</div>
+                </div>
+            </section>
+
+
+        </div>
+        <div class="content-right">
+            <table>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Buying Yr1</th>
+                        <th>Rent Yr1</th>
+                        <th>Rent Yr<span id="table-year-to-sell">5</span></th>
+                    </tr>
+                    <tr>
+                        <td>Monthly P&I</td>
+                        <td>$<span id="table-pi">1,145</span></td>
+                        <td>$<span id="table-cost-rent-yr1">2,300</span></td>
+                        <td>$<span id="table-cost-rent-input">2,588.67</span></td>
+                    </tr>
+                    <tr>
+                        <td>Prop. Tax/Ins.</td>
+                        <td>$<span id="table=proptaxins">1,100</span></td>
+                        <td>$<span id="table-rentinsure">20</span></td>
+                        <td>$<span id="table-increase-insurance">22.51</span></td>
+                    </tr>
+                    <tr>
+                        <td>Maint. & Repairs</td>
+                        <td>$<span id="table-maintrepairs">200</span></td>
+                        <td>$<span>0</span></td>
+                        <td>$<span>0</span></td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Exp.</td>
+                        <td>$<span id="table-total-buying-year1">2,445.8</span></td>
+                        <td>$<span id="table-total-year1">2,320</span></td>
+                        <td>$<span id="table-totalrent-input">2,611.18</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Spent</td>
+                        <td>$<span id="totalspentbuying">151,743.871</span></td>
+                        <td></td>
+                        <td>$<span id="totalspentrent">147,806.34</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <div id="canvas-div" style="width:100%;max-width:550px;">
+                <canvas id="myChart"></canvas>
+            </div>
+            <br>
+            <br>
+            <p>Appreicated Value <strong>$<span id="appreciated-value">331,224.24</span></strong></p>
+            <p>House Apprciation Gain <strong>$<span id="appreciated-gain">31,224.24</span></strong></p>
+            <br>
+            <br>
+            <p>Principal Paid <strong>$<span id="principalpaid">22,926.17</span></strong></p>
+            <p>Interest Paid <strong>$<span id="interestpaid">31,224.24</span></strong></p>
+            <br>
+            <br>
+            <p>Cost to Sell <strong>$<span id="costtosell">19,873.45</span></strong></p>
+            <br>
+            <br>
+            <p>Investment Gain After Selling <strong>$<span id="netgain">76,276.96</span></strong></p>
+        </div>
+    </div>
+
+    <script src="./app.js">
+    </script>
+
+</body>
+
+
+
+</html>
