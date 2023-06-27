@@ -3,6 +3,26 @@ body {
     color: #13284b;
 }
 
+.dark-blue {
+    color: #002147;
+}
+
+.medium-blue {
+    color: #004b8d;
+}
+
+.light-blue {
+    color: #007acc;
+}
+
+.off-white {
+    color: #f5f5f5;
+}
+
+.white {
+    color: #ffffff;
+}
+
 #renting-section {
     display: block;
 }
@@ -207,7 +227,16 @@ i {
 }
 
 .section-title>button{
-    width: 40px;
-    height: 20px;
+    width: 50px;
+    height: 25px;
     margin-left: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.header {
+    background-color: #004b8d;
+    padding:20px;
+    color: white;
 }
