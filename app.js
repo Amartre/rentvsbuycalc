@@ -24,6 +24,33 @@ let PropertyTaxYrArray = [2445.8, 2485.8, 2527.4, 2570.66, 2615.66]; //month tot
 let TotalSpentBuying = 151743.87072;
 let YearsArr = [1, 2, 3, 4, 5];
 
+function RentHide() {
+    var x = document.getElementById("renting-section");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function BuyHide() {
+    var x = document.getElementById("buying-section");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function OtherHide() {
+    var x = document.getElementById("other-section");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 
 var data = {
     labels: YearsArr,
