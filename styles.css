@@ -3,6 +3,13 @@ body {
     color: #13284b;
 }
 
+.light-orange {
+    background-color: #ffc9b3;
+}
+.orange {
+    color: rgb(255, 109, 44);
+}
+
 .dark-blue {
     color: #002147;
 }
