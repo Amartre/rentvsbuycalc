@@ -12,24 +12,24 @@
 
 </head>
 
-<body onload="GetDownPercent()">
+<body onload="GetDownPercent()" style="background-color: #f5f5f5">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center mb-5">
+            <div class="col text-center mb-5 header">
                 <h1>Rent Vs Buy Calculator</h1>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 mr-2">
+        <div class="row justify-content-between">
+            <div class="col-md-3">
 
 
                 <section>
                     <div class="section-title">
                         <h3>Renting</h3>
-                        <button onclick="RentHide()"></button>
+                        <button onclick="RentHide()"><i id="themeIconRent" class="fa-solid fa-minus" ></i></button>
                     </div>
 
                     <div id="renting-section">
@@ -68,7 +68,7 @@
                 <section>
                     <div class="section-title">
                         <h3>Buying</h3>
-                        <button onclick="BuyHide()"></button>
+                        <button onclick="BuyHide()"><i id="themeIconBuy" class="fa-solid fa-plus"></i></button>
                     </div>
                     <div id="buying-section">
                         <label>Price</label>
@@ -229,7 +229,7 @@
                 <section>
                     <div class="section-title">
                         <h3>Other</h3>
-                        <button onclick="OtherHide()"></button>
+                        <button onclick="OtherHide()"><i id="themeIconOther" class="fa-solid fa-plus"></i></button>
                     </div>
                     <div id="other-section">
                         <label>Years Before Selling</label>
@@ -257,7 +257,7 @@
             </div>
 
 
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <table>
                     <tbody>
                         <tr>
@@ -304,19 +304,25 @@
                     <canvas id="myChart"></canvas>
                 </div>
                 <br>
-                <br>
-                <p>Appreicated Value <strong>$<span id="appreciated-value">331,224.24</span></strong></p>
-                <p>House Apprciation Gain <strong>$<span id="appreciated-gain">31,224.24</span></strong></p>
-                <br>
-                <br>
-                <p>Principal Paid <strong>$<span id="principalpaid">22,926.17</span></strong></p>
-                <p>Interest Paid <strong>$<span id="interestpaid">31,224.24</span></strong></p>
-                <br>
-                <br>
-                <p>Cost to Sell <strong>$<span id="costtosell">19,873.45</span></strong></p>
-                <br>
-                <br>
-                <p>Investment Gain After Selling <strong>$<span id="netgain">76,276.96</span></strong></p>
+               
+                <p>Appreicated Value: <strong>$<span id="appreciated-value">331,224.24</span></strong></p>
+                <p>House Apprciation Gain: <strong>$<span id="appreciated-gain">31,224.24</span></strong></p>
+                
+                <p>Principal Paid: <strong>$<span id="principalpaid">22,926.17</span></strong></p>
+                <p>Interest Paid: <strong>$<span id="interestpaid">31,224.24</span></strong></p>
+               
+                <p>Cost to Sell: <strong>$<span id="costtosell">19,873.45</span></strong></p>
+                
+                <p>Investment Gain After Selling: <strong>$<span id="netgain">76,276.96</span></strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <h3>Rent Vs Buy Calculator</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odit fugit quasi consequatur dolorem quos sit est! Aut eveniet quas perferendis placeat quos expedita officia, repudiandae, sit illum consequatur rem?</p>
             </div>
         </div>
     </div>
