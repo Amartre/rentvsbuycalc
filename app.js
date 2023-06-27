@@ -78,7 +78,7 @@ var data = {
 
     {
         label: "Buy",
-        backgroundColor: "rgb(25, 110, 183)",
+        backgroundColor: "#004b8d",
         data: PropertyTaxYrArray,
     }]
 
