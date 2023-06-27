@@ -26,30 +26,46 @@ let YearsArr = [1, 2, 3, 4, 5];
 
 function RentHide() {
     var x = document.getElementById("renting-section");
+    var themeIcon = document.getElementById("themeIconRent");
     if (x.style.display === "none") {
         x.style.display = "block";
+        themeIcon.classList.remove("fa-plus");
+        themeIcon.classList.add("fa-minus");
     } else {
         x.style.display = "none";
+        themeIcon.classList.remove("fa-minus");
+        themeIcon.classList.add("fa-plus");
     }
 }
 
 function BuyHide() {
     var x = document.getElementById("buying-section");
+    var themeIcon = document.getElementById("themeIconBuy");
     if (x.style.display === "block") {
         x.style.display = "none";
+        themeIcon.classList.remove("fa-minus");
+        themeIcon.classList.add("fa-plus");
     } else {
         x.style.display = "block";
+        themeIcon.classList.remove("fa-plus");
+        themeIcon.classList.add("fa-minus");
     }
 }
 
 function OtherHide() {
     var x = document.getElementById("other-section");
+    var themeIcon = document.getElementById("themeIconOther");
     if (x.style.display === "block") {
         x.style.display = "none";
+        themeIcon.classList.remove("fa-minus");
+        themeIcon.classList.add("fa-plus");
     } else {
         x.style.display = "block";
+        themeIcon.classList.remove("fa-plus");
+        themeIcon.classList.add("fa-minus");
     }
 }
+
 
 
 var data = {
