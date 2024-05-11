@@ -14,23 +14,43 @@
 </head>
 
 <body onload="GetDownPercent()" style="background-color: #f5f5f5">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center mb-3 header">
-                <h1>Rent Vs Buy Calculator</h1>
+
+    <div class="container-fluid mb-5" style="background-color: #002147;">
+        <div class="row mx-0 px-0">
+            <div class="col text-center">
+                <div class="header">
+                    <h1 style="text-shadow: 1px 1px 2px black">Renting vs Buying Calculator</h1>
+                </div>
             </div>
         </div>
     </div>
+
+    <section class="header-section mb-5">
+        <div class="container">
+            <div class="row header-section-content">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1560170412-0f7df0eb0fb1?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="Image">
+                </div>
+                <div class="col-md-6 header-section-text">
+                    <h2>Decide if renting or buying is best for you!</h2><br>
+                    <p class="text-left">Use the Rent vs Buy Calculator to make a more informed decision about whether renting or buying a home is the best financial choice for you. This intuitive tool takes into account factors such as monthly rent, home price, down payment, interest rates, and additional expenses to provide you with a comprehensive comparison. Whether you're a first-time homebuyer or considering renting for flexibility, our calculator helps you weigh the costs and benefits, guiding you towards the option that aligns with your long-term financial goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
 
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-md-3 mb-3">
 
 
-                <section>
+                <section class="mb-3">
                     <div class="section-title">
                         <h3>Renting</h3>
-                        <button onclick="RentHide()"><i id="themeIconRent" class="fa-solid fa-minus" ></i></button>
+                        <button onclick="RentHide()" class="btn btn-primary ml-2"><i id="themeIconRent" class="fa-solid fa-minus"></i></button>
                     </div>
 
                     <div id="renting-section">
@@ -66,10 +86,10 @@
                 </section>
 
 
-                <section>
+                <section class="mb-3">
                     <div class="section-title">
                         <h3>Buying</h3>
-                        <button onclick="BuyHide()"><i id="themeIconBuy" class="fa-solid fa-plus"></i></button>
+                        <button onclick="BuyHide()" class="btn btn-primary ml-2"><i id="themeIconBuy" class="fa-solid fa-plus"></i></button>
                     </div>
                     <div id="buying-section">
                         <label>Price</label>
@@ -227,10 +247,10 @@
                 </section>
 
 
-                <section>
+                <section class="mb-3">
                     <div class="section-title">
                         <h3>Other</h3>
-                        <button onclick="OtherHide()"><i id="themeIconOther" class="fa-solid fa-plus"></i></button>
+                        <button onclick="OtherHide()" class="btn btn-primary ml-2"><i id="themeIconOther" class="fa-solid fa-plus"></i></button>
                     </div>
                     <div id="other-section">
                         <label>Years Before Selling</label>
@@ -305,15 +325,15 @@
                     <canvas id="myChart"></canvas>
                 </div>
                 <br>
-               
+
                 <p>Appreicated Value: <strong>$<span id="appreciated-value">331,224.24</span></strong></p>
                 <p>House Apprciation Gain: <strong>$<span id="appreciated-gain">31,224.24</span></strong></p>
-                
+
                 <p>Principal Paid: <strong>$<span id="principalpaid">22,926.17</span></strong></p>
                 <p>Interest Paid: <strong>$<span id="interestpaid">31,224.24</span></strong></p>
-               
+
                 <p>Cost to Sell: <strong>$<span id="costtosell">19,873.45</span></strong></p>
-                
+
                 <p>Investment Gain After Selling: <strong>$<span id="netgain">76,276.96</span></strong></p>
             </div>
         </div>
@@ -323,15 +343,22 @@
         <div class="row">
             <div class="col mt-3">
                 <h3>Rent Vs Buy Calculator</h3>
-                <p>A buy vs rent calculator is a tool used to assess the financial implications of buying or renting a house. It helps individuals make an informed decision by comparing the costs associated with purchasing a home versus renting one. The calculator takes into account various factors, such as the purchase price, down payment, interest rates, monthly mortgage payments, rental costs, and other expenses.</p>
+                <p>A buy vs rent calculator is a tool used to assess the financial implications of buying or renting a
+                    house. It helps individuals make an informed decision by comparing the costs associated with
+                    purchasing a home versus renting one. The calculator takes into account various factors, such as the
+                    purchase price, down payment, interest rates, monthly mortgage payments, rental costs, and other
+                    expenses.</p>
             </div>
         </div>
     </div>
 
-     <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col mt-3">
-                <p class="small">Disclosure: Information and the interactive calculator are made available to you as self-help tools for your independent use. I cannot and do not guarantee its accuracy or its applicability to your circumstances. I encourage you to seek personalized advice from qualified professionals regarding all personal finance issues.</p>
+                <p class="small">Disclosure: Information and the interactive calculator are made available to you as
+                    self-help tools for your independent use. I cannot and do not guarantee its accuracy or its
+                    applicability to your circumstances. I encourage you to seek personalized advice from qualified
+                    professionals regarding all personal finance issues.</p>
             </div>
         </div>
     </div>

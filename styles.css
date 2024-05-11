@@ -1,6 +1,8 @@
-body {
+body, html {
     font-family: Helvetica;
     color: #13284b;
+    margin: 0;
+    padding: 0;
 }
 
 .light-orange {
@@ -224,7 +226,7 @@ td {
 
 
 i {
-    color: #13284b;
+    color: white;
 }
 
 .section-title {
@@ -233,17 +235,37 @@ i {
     justify-content: space-between;
 }
 
+
 .section-title>button{
     width: 50px;
-    height: 25px;
-    margin-left: 20px;
-    border-radius: 10px;
-    font-size: 12px;
-    cursor: pointer;
+    color: #007acc;
 }
 
 .header {
-    background-color: #004b8d;
     padding:20px;
     color: white;
+}
+
+
+
+.header-section {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 50px 0;
+}
+
+.header-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.header-section-text {
+    padding-left: 30px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-section-content {
+        flex-direction: column;
+    }
 }
