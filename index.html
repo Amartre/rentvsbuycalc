@@ -15,7 +15,8 @@
 
 <body onload="GetDownPercent()" style="background-color: #f5f5f5">
 
-    <div class="container-fluid mb-5" style="background-color: #002147;">
+
+    <div class="container-fluid" style="background-color: #002147;">
         <div class="row mx-0 px-0">
             <div class="col text-center">
                 <div class="header">
@@ -25,22 +26,28 @@
         </div>
     </div>
 
-    <section class="header-section mb-5">
+    <section class="header-section mb-5 mt-5">
         <div class="container">
             <div class="row header-section-content">
                 <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1560170412-0f7df0eb0fb1?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="Image">
+                    <img src="https://images.unsplash.com/photo-1560170412-0f7df0eb0fb1?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="img-fluid" alt="Image">
                 </div>
                 <div class="col-md-6 header-section-text">
                     <h2>Decide if renting or buying is best for you!</h2><br>
-                    <p class="text-left">Use the Rent vs Buy Calculator to make a more informed decision about whether renting or buying a home is the best financial choice for you. This intuitive tool takes into account factors such as monthly rent, home price, down payment, interest rates, and additional expenses to provide you with a comprehensive comparison. Whether you're a first-time homebuyer or considering renting for flexibility, our calculator helps you weigh the costs and benefits, guiding you towards the option that aligns with your long-term financial goals.</p>
+                    <p class="text-left">Use the Rent vs Buy Calculator to make a more informed decision about whether
+                        renting or buying a home is the best financial choice for you. This intuitive tool takes into
+                        account factors such as monthly rent, home price, down payment, interest rates, and additional
+                        expenses to provide you with a comprehensive comparison. Whether you're a first-time homebuyer
+                        or considering renting for flexibility, our calculator helps you weigh the costs and benefits,
+                        guiding you towards the option that aligns with your long-term financial goals.</p>
                 </div>
             </div>
         </div>
     </section>
 
 
-   
+
 
     <div class="container">
         <div class="row justify-content-between">
@@ -50,7 +57,8 @@
                 <section class="mb-3">
                     <div class="section-title">
                         <h3>Renting</h3>
-                        <button onclick="RentHide()" class="btn btn-primary ml-2"><i id="themeIconRent" class="fa-solid fa-minus"></i></button>
+                        <button onclick="RentHide()" class="btn btn-primary ml-2"><i id="themeIconRent"
+                                class="fa-solid fa-minus"></i></button>
                     </div>
 
                     <div id="renting-section">
@@ -89,7 +97,8 @@
                 <section class="mb-3">
                     <div class="section-title">
                         <h3>Buying</h3>
-                        <button onclick="BuyHide()" class="btn btn-primary ml-2"><i id="themeIconBuy" class="fa-solid fa-plus"></i></button>
+                        <button onclick="BuyHide()" class="btn btn-primary ml-2"><i id="themeIconBuy"
+                                class="fa-solid fa-plus"></i></button>
                     </div>
                     <div id="buying-section">
                         <label>Price</label>
@@ -250,7 +259,8 @@
                 <section class="mb-3">
                     <div class="section-title">
                         <h3>Other</h3>
-                        <button onclick="OtherHide()" class="btn btn-primary ml-2"><i id="themeIconOther" class="fa-solid fa-plus"></i></button>
+                        <button onclick="OtherHide()" class="btn btn-primary ml-2"><i id="themeIconOther"
+                                class="fa-solid fa-plus"></i></button>
                     </div>
                     <div id="other-section">
                         <label>Years Before Selling</label>
@@ -339,15 +349,27 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col mt-3">
-                <h3>Rent Vs Buy Calculator</h3>
-                <p>A buy vs rent calculator is a tool used to assess the financial implications of buying or renting a
-                    house. It helps individuals make an informed decision by comparing the costs associated with
-                    purchasing a home versus renting one. The calculator takes into account various factors, such as the
-                    purchase price, down payment, interest rates, monthly mortgage payments, rental costs, and other
-                    expenses.</p>
+    <div style="background-color: white">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-3">
+                    <h3>Glossary</h3>
+                    <p><strong>Annual Rent Increase</strong><br>The percentage by which rental payments are expected to increase each year due to factors such as inflation and changes in market conditions.</p>
+                    <p><strong>Appreciation</strong><br>The increase in the value of a property over time. Home appreciation is influenced by factors such as market demand, location, and economic conditions.</p>
+                    <p><strong>Closing Costs</strong><br>The fees and expenses associated with finalizing a real estate transaction, including loan origination fees, appraisal fees, title insurance, and attorney fees.</p>
+                    <p><strong>Cost to Sell</strong><br>The total expenses incurred when selling a property, including real estate agent commissions, closing costs, and any necessary repairs or renovations.</p>
+                    <p><strong>Down Payment</strong><br>The initial upfront payment made by the buyer when purchasing a home. It is usually expressed as a percentage of the total purchase price.</p>
+                    <p><strong>Homeowners Association (HOA) Fees</strong><br>Fees paid by homeowners to cover the costs of maintaining and managing shared amenities and common areas within a community or development.</p>
+                    <p><strong>Homeowners Insurance<br></strong>Insurance coverage that provides financial protection against damage to a home and its contents, as well as liability for injuries and property damage caused by the homeowner or their family members.</p>
+                    <p><strong>Interest Rate</strong><br>The percentage of the loan amount charged by the lender as interest over a specified period, typically expressed as an annual percentage rate (APR).</p>
+                    <p><strong>Loan Amount</strong><br>The total sum of money borrowed by a buyer to purchase a home. It is calculated as the difference between the home price and the down payment.</p>
+                    <p><strong>Loan Length</strong><br>The duration of time over which the mortgage loan is repaid, typically expressed in years.</p>
+                    <p><strong>Maintenance & Repairs</strong><br>Ongoing expenses associated with maintaining a property in good condition, such as plumbing repairs, roof maintenance, and landscaping.</p>
+                    <p><strong>Mortgage Insurance</strong><br>Insurance that protects lenders against losses incurred if the borrower defaults on the mortgage loan. It is typically required for conventional loans with down payments less than 20% of the home's purchase price.</p>
+                    <p><strong>Principal</strong><br>The original amount of money borrowed in a loan, excluding interest. Monthly mortgage payments go towards paying down the principal balance of the loan.</p>
+                    <p><strong>Property Tax</strong><br>A tax assessed on real estate by the local government. It is based on the value of the property and is typically paid annually by the property owner.</p>
+                    <p><strong>Renters Insurance</strong><br>Insurance coverage that protects tenants against loss or damage to personal belongings, as well as liability for injuries or property damage caused by the tenant.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -362,6 +384,10 @@
             </div>
         </div>
     </div>
+
+    <button id="scrollToTopBtn" class="btn btn-primary"
+        style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99;" onclick="scrollToTop()">Scroll
+        to Top</button>
 
 
     <script src="./app.js">

@@ -670,3 +670,23 @@ function ChangeYearsBeforeSelling() {
         PropertyTaxIncrease.call();
     };
 };
+
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Function to toggle visibility of scroll-to-top button based on scroll position
+window.addEventListener('scroll', function () {
+    var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Show button if user has scrolled down more than 20px from the top
+    if (window.scrollY > 20) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
