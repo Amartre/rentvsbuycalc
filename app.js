@@ -86,7 +86,6 @@ var data = {
 
 //config block
 
-
 const config = {
     type: 'bar',
     data,
